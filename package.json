@@ -4,10 +4,15 @@
   "description": "Learn to build a stastic blog with Eleventy from scratch",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx eleventy --serve",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
+    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "build": "env NODE_ENV=production npx eleventy"
   },
-  "keywords": ["eleventy", "static blog"],
+  "keywords": [
+    "eleventy",
+    "static blog"
+  ],
   "author": {
     "name": "Cuong (Erik) Dao",
     "email": "cuong@neuraltalks.io",
@@ -20,6 +25,13 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-cache-assets": "^2.3.0"
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "concurrently": "^6.2.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^4.1.0",
+    "moment": "^2.29.1",
+    "sass": "^1.39.2"
   }
 }
