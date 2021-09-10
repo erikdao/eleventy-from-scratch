@@ -1,15 +1,23 @@
 {
   "name": "eleventy-from-scratch",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learn to build a stastic blog with Eleventy from scratch",
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["eleventy", "static blog"],
+  "author": {
+    "name": "Cuong (Erik) Dao",
+    "email": "cuong@neuraltalks.io",
+    "url": "https://neuraltalks.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erikdao/eleventy-from-scratch"
+  },
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-cache-assets": "^2.3.0"
